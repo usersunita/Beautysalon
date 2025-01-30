@@ -3,7 +3,7 @@ import contact from '../assets/contact.jpg';
 
 const Contact = () => {
   return (
-    <div id="contact" className="w-full h-fit grid grid-cols-1 lg:grid-cols-2 justify-center items-start">
+    <div id="contact" className="w-full md:max-w-[90%] md:mx-auto grid grid-cols-1 lg:grid-cols-2 justify-center items-start">
       <div
         className="w-full bg-cover bg-center h-[700px]"
         style={{

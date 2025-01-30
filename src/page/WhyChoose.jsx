@@ -8,7 +8,7 @@ const WhyChoose = () => {
   return (
     <div>
       <section id='about'
-        className="w-full md:px-20 px-10 md:py-20 py-20 flex flex-col md:flex-row justify-center items-center gap-20 bg-cover bg-center"
+        className="w-full md:max-w-[90%] md:mx-auto md:px-20 px-10 md:py-20 py-20 flex flex-col md:flex-row justify-center items-center gap-20 bg-cover bg-center"
         style={{ backgroundImage: `url(${image3})` }}
       >
         <div className="flex flex-col justify-center items-center gap-10 bg-white p-10 rounded-xl md:w-[40%] w-full">

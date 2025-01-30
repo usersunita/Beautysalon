@@ -77,7 +77,7 @@ const newProducts = [
 
 const Products = () => {
   return (
-    <section id="product" className="max-w-screen-xl w-11/12 mx-auto my-12">
+    <section id="product" className="w-full md:max-w-[90%] md:mx-auto mx-auto my-12">
 <div>
       {/* <div className=" bg-gray-50 p-4 rounded-lg flex justify-between items-center flex-wrap"> */}
         <h3 className="text-3xl font-extrabold text-gray-800 text-center justify-center">New Products</h3>
