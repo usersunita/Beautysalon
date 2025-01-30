@@ -34,7 +34,7 @@ const newProducts = [
     id: 5,
     category: "mackup",
     image: product1,
-    title: "Set of Bridel Eye Lashies",
+    title: "Set of Bridal Eye Lashes",
     price: "RS.1100",
   },
   {
@@ -62,7 +62,7 @@ const newProducts = [
     id: 9,
     category: "skin",
     image: product1,
-    title: "Skin Car Lotion For Women",
+    title: "Skin Care Lotion For Women",
     price: "RS.900",
   },
   {
@@ -75,61 +75,37 @@ const newProducts = [
 ];
 
 const Products = () => {
-<<<<<<< HEAD
-  return (
-    <section id="product" className="w-full md:max-w-[90%] md:mx-auto mx-auto my-12">
-<div>
-      {/* <div className=" bg-gray-50 p-4 rounded-lg flex justify-between items-center flex-wrap"> */}
-        <h3 className="text-3xl font-extrabold text-gray-800 text-center justify-center">New Products</h3>
-       {/*<ul className="flex flex-wrap justify-center items-center space-x-4">
-          <li className="filter-list text-gray-800 font-semibold cursor-pointer py-1 px-4 rounded-full hover:bg-yellow-400 active:bg-yellow-300">
-            All
-          </li>
-          <li className="filter-list text-gray-800 font-semibold cursor-pointer py-1 px-4 rounded-full hover:bg-yellow-400 active:bg-yellow-300">
-            Skin
-          </li>
-          <li className="filter-list text-gray-800 font-semibold cursor-pointer py-1 px-4 rounded-full hover:bg-yellow-400 active:bg-yellow-300">
-            Makeup
-          </li>
-          <li className="filter-list text-gray-800 font-semibold cursor-pointer py-1 px-4 rounded-full hover:bg-yellow-400 active:bg-yellow-300">
-            Nails
-          </li>
-        </ul>*/}
-      </div> 
-=======
   const [visibleCount, setVisibleCount] = useState(4);
-  const [expanded, setExpanded] = useState(false);
->>>>>>> 5601982913b0478b3560582c8ff9909173cc122b
+  const totalProducts = newProducts.length;
 
   const handleToggle = () => {
-    if (expanded) {
-      setVisibleCount(visibleCount + 4);
-    }
-    setExpanded(!expanded);
+    setVisibleCount((prev) => (prev >= totalProducts ? 4 : prev + 4));
   };
+
+ 
   return (
-    <section id="product" className="w-full md:max-w-[90%]  md:mx-auto my-12">
-      <div className="flex justify-between w-full">
+    <section id="product" className="w-full md:max-w-[90%] md:mx-auto mx-auto my-12">
+      <div className="flex justify-between w-full items-center">
         <h3 className="text-3xl font-extrabold text-gray-800 text-center justify-center">
           New Products
         </h3>
 
         <div
-          className="underline text-blue-600 text-xs cursor-pointer"
+          className=" text-blue-600 text-xs cursor-pointer"
           onClick={handleToggle}
         >
-          {expanded ? "View Less" : "View More"}
-        </div>
+          {visibleCount >= totalProducts ? "<<View Less>>" : "<<View More>>"}
+          </div>
       </div>
 
-      <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-6 mt-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
         {newProducts.slice(0, visibleCount).map((product) => (
           <div
             key={product.id}
             className={`new-product-box-wrapper ${product.category}`}
           >
-            <div className=" bg-white rounded-lg shadow-lg hover:shadow-2xl border border-gray-100 p-6">
-              <a href="#" className=" relative w-full h-80 mb-6">
+            <div className="bg-white rounded-lg shadow-lg hover:shadow-2xl border border-gray-100 p-6">
+              <a href="#" className="relative w-full h-80 mb-6">
                 <span className="absolute top-2 left-2 bg-red-200 text-gray-800 font-semibold py-1 px-2 rounded-md text-xs">
                   {product.category.charAt(0).toUpperCase() +
                     product.category.slice(1)}
@@ -137,12 +113,12 @@ const Products = () => {
                 <img
                   src={product.image}
                   alt={product.title}
-                  className="w-full h-full object-contain transition-transform duration-300 ease-in-out hover:scale-105"
+                  className="w-full h-full object-contain rounded-md transition-transform duration-300 ease-in-out hover:scale-105"
                 />
               </a>
 
-              <div className=" flex flex-col gap-1  text-center pt-4">
-                <a href="#" className=" text-lg font-semibold text-gray-400">
+              <div className="flex flex-col gap-1 text-center pt-4">
+                <a href="#" className="text-lg font-semibold text-gray-400">
                   {product.title}
                 </a>
                 <span className="text-xl font-medium text-purple-700">
@@ -150,7 +126,7 @@ const Products = () => {
                 </span>
                 <a
                   href="#"
-                  className=" w-full mt-5 py-4 px-4 bg-black text-white rounded-full font-semibold text-[15px] hover:bg-gray-700"
+                  className="w-full mt-5 py-4 px-4 bg-black text-white rounded-full font-semibold text-[15px] hover:bg-gray-700"
                 >
                   Add To Cart
                 </a>
@@ -159,6 +135,7 @@ const Products = () => {
           </div>
         ))}
       </div>
+      <button className="justify-center border-2 border-black text-center mt-2">View More</button>
     </section>
   );
 };

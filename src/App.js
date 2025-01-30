@@ -20,10 +20,10 @@ const App = () => {
        <WhyChoose/> 
        <Products/> 
        <Services/> 
-      <Gallery/>
+      {/* <Gallery/>
        <Testimonail/>
       <Contact/>
-      <Footer/>
+      <Footer/> */}
   </div>
   )
 }
