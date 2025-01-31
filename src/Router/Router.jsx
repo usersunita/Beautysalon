@@ -22,16 +22,13 @@ const Router = () => {
           <Route path="/about" element={<Home />} />
           <Route path="/contact" element={<Home />} />
           <Route path="/Products" element={<Products />} />
-<<<<<<< HEAD
           {/* <Route path="/productlist/:id" element={<ProductList/>}/> */}
           <Route path="/services" element={<Home />} />
           <Route path="/gallery" element={<Home/>}/>
           <Route path ="/testmonial" element={<Home/>}/>
-=======
           <Route path="/services/:name" element={<DetailServices />} />
           <Route path="/gallery" element={<Home />} />
           <Route path="/testmonial" element={<Home />} />
->>>>>>> 10d2c752af7905a5182a9d85bbccbaba56e988fa
           <Route path="/contact" element={<Home />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
