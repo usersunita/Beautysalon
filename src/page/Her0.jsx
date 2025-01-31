@@ -1,13 +1,13 @@
-import React from 'react';
-import image1 from '../assets/image1.jpg';
-import { FaLocationDot } from 'react-icons/fa6';
-import { MdOutlinePhoneAndroid } from 'react-icons/md';
-import { FaHeadphones } from 'react-icons/fa6';
-import { MdEmail } from 'react-icons/md';
-import slider1 from '../assets/slider1.jpg';
-import image2 from '../assets/image2.jpg';
-import image3 from '../assets/image3.jpg';
-import ProductGrid from '../component/ProductGrid';
+import React from "react";
+import image1 from "../assets/image1.jpg";
+import { FaLocationDot } from "react-icons/fa6";
+import { MdOutlinePhoneAndroid } from "react-icons/md";
+import { FaHeadphones } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
+import slider1 from "../assets/slider1.jpg";
+import image2 from "../assets/image2.jpg";
+import image3 from "../assets/image3.jpg";
+import ProductGrid from "../component/ProductGrid";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -25,26 +25,39 @@ const Her0 = () => {
 
   return (
     <div>
-      <section id="home" className="w-full md:max-w-[90%] md:mx-auto flex flex-col md:flex-row gap-8 pt-6 mb-5">
-        <div className="flex flex-col justify-center items-start gap-8 bg-pink-100 text-gray-700 rounded-md md:w-[50%] w-full">
+      <section
+        id="home"
+        className="w-full md:max-w-[90%] md:mx-auto flex flex-col md:flex-row gap-8 pt-6 mb-5"
+      >
+        <div className="flex flex-col justify-center items-start gap-8 bg-pink-100 text-gray-700 rounded-md md:w-[50%] w-full p-6">
           <h1 className="text-5xl font-semibold">WELCOME</h1>
-          <h1 className="text-3xl font-bold">Beauty Salon in Nepal, Kathmandu</h1>
+          <h1 className="text-3xl font-bold">
+            Beauty Salon in Nepal, Kathmandu
+          </h1>
           <div className="flex flex-col justify-center items-start gap-6">
             <div className="flex justify-center items-center gap-3">
               <FaLocationDot className="text-black text-2xl" />
-              <h1 className="text-xl text-gray-800 font-semibold">Kathmandu, 10 Tinkune</h1>
+              <h1 className="text-xl text-gray-800 font-semibold">
+                Kathmandu, 10 Tinkune
+              </h1>
             </div>
             <div className="flex justify-center items-center gap-3">
               <MdOutlinePhoneAndroid className="text-black text-2xl" />
-              <h1 className="text-xl text-gray-800 font-semibold">9845678945 / 0166457</h1>
+              <h1 className="text-xl text-gray-800 font-semibold">
+                9845678945 / 0166457
+              </h1>
             </div>
             <div className="flex justify-center items-center gap-3">
               <MdEmail className="text-black text-2xl" />
-              <h1 className="text-xl text-gray-800 font-semibold">company@gmail.com</h1>
+              <h1 className="text-xl text-gray-800 font-semibold">
+                company@gmail.com
+              </h1>
             </div>
             <div className="flex justify-center items-center gap-3">
               <FaHeadphones className="text-black text-2xl" />
-              <h1 className="text-xl text-gray-800 font-semibold">customer@gmail.com</h1>
+              <h1 className="text-xl text-gray-800 font-semibold">
+                customer@gmail.com
+              </h1>
             </div>
           </div>
           <button className="px-8 py-3 rounded-xl border-2 border-gray-600 text-gray-600 font-semibold text-lg hover:bg-pink-300">
@@ -78,8 +91,3 @@ const Her0 = () => {
 };
 
 export default Her0;
-
-
-
-
-
