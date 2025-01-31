@@ -8,7 +8,7 @@ const ProductGrid = () => {
       <h3 className="text-4xl font-extrabold text-gray-800 text-center justify-center flex flex-col mt-8 gap-6">
         Hot Deals
       </h3>
-      <section className="grid grid-cols-1 md:grid-cols-4 gap-6  mx-auto my-6 px-4">
+      <section className="grid grid-cols-1 md:grid-cols-4 gap-6  mx-auto my-6 ">
         <div className="relative h-52 rounded-lg overflow-hidden flex justify-end bg-green-100">
           <img
             src={product}
