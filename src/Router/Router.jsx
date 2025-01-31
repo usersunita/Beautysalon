@@ -6,11 +6,8 @@ import ProductDetail from "../page/ProductDetail";
 import Register from "../page/Register";
 import Login from "../page/Login";
 import Products from "../page/Products";
-<<<<<<< HEAD
 import ProductList from "../page/ProductList";
-=======
 import DetailServices from "../page/DetailServices";
->>>>>>> 10d2c752af7905a5182a9d85bbccbaba56e988fa
 
 const Router = () => {
   return (
