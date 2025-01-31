@@ -1,14 +1,13 @@
-
-
-import React from 'react';
-import image3 from '../assets/image3.jpg';
-import { FaAngleDoubleRight } from 'react-icons/fa';
+import React from "react";
+import image3 from "../assets/image3.jpg";
+import { FaAngleDoubleRight } from "react-icons/fa";
 
 const WhyChoose = () => {
   return (
-    <div>
-      <section id='about'
-        className="w-full md:max-w-[90%] md:mx-auto md:px-20 px-10 md:py-20 py-20 flex flex-col md:flex-row justify-center items-center gap-20 bg-cover bg-center"
+    <div className="w-full md:max-w-[90%] md:mx-auto">
+      <section
+        id="about"
+        className="w-full  md:px-20 px-10 md:py-20 py-20 flex flex-col md:flex-row justify-center items-center gap-20 bg-cover bg-center"
         style={{ backgroundImage: `url(${image3})` }}
       >
         <div className="flex flex-col justify-center items-center gap-10 bg-white p-10 rounded-xl md:w-[40%] w-full">
@@ -28,43 +27,56 @@ const WhyChoose = () => {
         </div>
 
         <div className="flex flex-col justify-center items-center gap-10 bg-white p-10 rounded-xl md:w-[40%] w-full">
-          <h1 className="text-6xl text-gray-600 font-bold text-center">WHY CHOOSE US</h1>
+          <h1 className="text-6xl text-gray-600 font-bold text-center">
+            WHY CHOOSE US
+          </h1>
           <p className="text-2xl font-semibold text-gray-600 md:text-start text-center">
-            The purple penguin danced elegantly across the moonlit marshmallow field
+            The purple penguin danced elegantly across the moonlit marshmallow
+            field
           </p>
 
           <div className="flex flex-col justify-center items-start gap-4">
             <div className="flex justify-center items-center gap-3">
               <FaAngleDoubleRight className="text-gray-600 text-2xl" />
-              <h1 className="text-xl text-gray-600 font-semibold">Always Welcoming</h1>
+              <h1 className="text-xl text-gray-600 font-semibold">
+                Always Welcoming
+              </h1>
             </div>
           </div>
 
           <div className="flex flex-col justify-center items-start gap-4">
             <div className="flex justify-center items-center gap-3">
               <FaAngleDoubleRight className="text-gray-600 text-2xl" />
-              <h1 className="text-xl text-gray-600 font-semibold">Experienced Staff</h1>
+              <h1 className="text-xl text-gray-600 font-semibold">
+                Experienced Staff
+              </h1>
             </div>
           </div>
 
           <div className="flex flex-col justify-center items-start gap-4">
             <div className="flex justify-center items-center gap-3">
               <FaAngleDoubleRight className="text-gray-600 text-2xl" />
-              <h1 className="text-xl text-gray-600 font-semibold">High-Quality Products</h1>
+              <h1 className="text-xl text-gray-600 font-semibold">
+                High-Quality Products
+              </h1>
             </div>
           </div>
 
           <div className="flex flex-col justify-center items-start gap-4">
             <div className="flex justify-center items-center gap-3">
               <FaAngleDoubleRight className="text-gray-600 text-2xl" />
-              <h1 className="text-xl text-gray-600 font-semibold">Affordable Prices</h1>
+              <h1 className="text-xl text-gray-600 font-semibold">
+                Affordable Prices
+              </h1>
             </div>
           </div>
 
           <div className="flex flex-col justify-center items-start gap-4">
             <div className="flex justify-center items-center gap-3">
               <FaAngleDoubleRight className="text-gray-600 text-2xl" />
-              <h1 className="text-xl text-gray-600 font-semibold">Friendly Environment</h1>
+              <h1 className="text-xl text-gray-600 font-semibold">
+                Friendly Environment
+              </h1>
             </div>
           </div>
         </div>

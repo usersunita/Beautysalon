@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import product1 from "../assets/product1.jpg";
 import { NavLink } from "react-router-dom";
 
-const newProducts = [
+export const newProducts = [
   {
     id: 1,
     category: "skin",
@@ -108,7 +108,7 @@ const Products = () => {
             className={`new-product-box-wrapper ${product.category}`}
           >
             <div className="bg-white rounded-lg shadow-lg hover:shadow-2xl border border-gray-100 p-6">
-              <NavLink to>
+              <NavLink to={`productDetail/${product.id}`}>
                 <a href="#" className="relative w-full h-80 mb-6">
                   <span className="absolute top-2 left-2 bg-red-200 text-gray-800 font-semibold py-1 px-2 rounded-md text-xs">
                     {product.category.charAt(0).toUpperCase() +

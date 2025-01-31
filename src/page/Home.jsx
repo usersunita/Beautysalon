@@ -3,6 +3,7 @@ import Her0 from "./Her0";
 import WhyChoose from "./WhyChoose";
 import Products from "./Products";
 import Services from "./Services";
+import Footer from "../component/Footer";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
         <WhyChoose />
         <Products />
         <Services />
+        <Footer />
       </div>
     </div>
   );

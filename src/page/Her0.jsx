@@ -27,9 +27,9 @@ const Her0 = () => {
     <div>
       <section
         id="home"
-        className="w-full md:max-w-[90%] md:mx-auto flex flex-col md:flex-row gap-8 pt-6 mb-5"
+        className="w-full md:max-w-[90%] md:mx-auto flex flex-col md:flex-row  pt-6 mb-5"
       >
-        <div className="flex flex-col justify-center items-start gap-8 bg-pink-100 text-gray-700 rounded-md md:w-[50%] w-full p-6">
+        <div className="flex flex-col justify-center items-start gap-8 bg-pink-100 text-gray-700  md:w-[50%] w-full p-4">
           <h1 className="text-5xl font-semibold">WELCOME</h1>
           <h1 className="text-3xl font-bold">
             Beauty Salon in Nepal, Kathmandu
@@ -70,17 +70,17 @@ const Her0 = () => {
             <img
               src={slider1}
               alt="Beauty Salon Interior"
-              className="rounded-xl w-full h-[350px] md:h-[500px] object-cover"
+              className=" w-full h-[350px] md:h-[500px] object-cover"
             />
             <img
               src={image2}
               alt="Beauty Salon Interior"
-              className="rounded-xl w-full h-[350px] md:h-[500px] object-cover"
+              className=" w-full h-[350px] md:h-[500px] object-cover"
             />
             <img
               src={image3}
               alt="Beauty Salon Interior"
-              className="rounded-xl w-full h-[350px] md:h-[500px] object-cover"
+              className=" w-full h-[350px] md:h-[500px] object-cover"
             />
           </Slider>
         </div>
