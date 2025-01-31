@@ -151,3 +151,159 @@ const Products = () => {
 };
 
 export default Products;
+
+
+
+
+// import React, { useState } from "react";
+// import product1 from "../assets/product1.jpg";
+// import { NavLink } from "react-router-dom";
+
+// export const newProducts = [
+//   {
+//     id: 1,
+//     category: "skin",
+//     image: product1,
+//     title: "FaceWash For Women",
+//     price: "RS.300",
+//     description: "A refreshing facewash that cleanses your skin deeply."
+//   },
+//   {
+//     id: 2,
+//     category: "skin",
+//     image: product1,
+//     title: "Element Small FaceWash",
+//     price: "RS.250",
+//     description: "Gentle formula, ideal for all skin types."
+//   },
+//   {
+//     id: 3,
+//     category: "skin",
+//     image: product1,
+//     title: "Element Small FaceWash",
+//     price: "RS.250",
+//     description: "Gentle formula, ideal for all skin types."
+//   },
+//   {
+//     id: 4,
+//     category: "skin",
+//     image: product1,
+//     title: "Element Small FaceWash",
+//     price: "RS.250",
+//     description: "Gentle formula, ideal for all skin types."
+//   },
+//   {
+//     id: 5,
+//     category: "skin",
+//     image: product1,
+//     title: "Element Small FaceWash",
+//     price: "RS.250",
+//     description: "Gentle formula, ideal for all skin types."
+//   },
+//   {
+//     id: 6,
+//     category: "skin",
+//     image: product1,
+//     title: "Element Small FaceWash",
+//     price: "RS.250",
+//     description: "Gentle formula, ideal for all skin types."
+//   },
+//   {
+//     id: 7,
+//     category: "skin",
+//     image: product1,
+//     title: "Element Small FaceWash",
+//     price: "RS.250",
+//     description: "Gentle formula, ideal for all skin types."
+//   },
+//   {
+//     id: 8,
+//     category: "skin",
+//     image: product1,
+//     title: "Element Small FaceWash",
+//     price: "RS.250",
+//     description: "Gentle formula, ideal for all skin types."
+//   },
+// ];
+
+// const Products = () => {
+//   const [visibleCount, setVisibleCount] = useState(4);
+//   const totalProducts = newProducts.length;
+//   const [selectedProduct, setSelectedProduct] = useState(null);
+
+//   const handleToggle = () => {
+//     setVisibleCount((prev) => (prev >= totalProducts ? 4 : prev + 4));
+//   };
+
+//   const handleProductClick = (productId) => {
+//     setSelectedProduct((prev) => (prev === productId ? null : productId));
+//   };
+
+//   return (
+//     <section id="product" className="w-full md:max-w-[90%] md:mx-auto mx-auto my-12">
+//       <div className="flex justify-between w-full items-center">
+//         <h3 className="text-3xl font-extrabold text-gray-800 text-center justify-center">
+//           New Products
+//         </h3>
+//         <div className="text-blue-600 text-xs cursor-pointer" onClick={handleToggle}>
+//           {visibleCount >= totalProducts ? "<<View Less>>" : "<<View More>>"}
+//         </div>
+//       </div>
+
+//       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+//         {newProducts.slice(0, visibleCount).map((product) => (
+//           <div key={product.id} className={`new-product-box-wrapper ${product.category}`}>
+//             <div className="bg-white rounded-lg shadow-lg hover:shadow-2xl border border-gray-100 p-6">
+//               <NavLink to={`productDetail/${product.id}`}>
+//                 <a href="#" className="relative w-full h-80 mb-6">
+//                   <img
+//                     src={product.image}
+//                     alt={product.title}
+//                     className="w-full h-full object-contain rounded-md transition-transform duration-300 ease-in-out hover:scale-105"
+//                   />
+//                 </a>
+//               </NavLink>
+
+//               <div className="flex flex-col gap-1 text-center pt-4">
+//                 <a href="#" className="text-lg font-semibold text-gray-400">
+//                   {product.title}
+//                 </a>
+//                 <span className="text-xl font-medium text-purple-700">{product.price}</span>
+
+//                 {/* Add a button to toggle the description */}
+//                 <div className="mt-4">
+//                   <button
+//                     className="w-full py-4 px-4 bg-black text-white rounded-full font-semibold text-[15px] hover:bg-gray-700"
+//                     onClick={() => handleProductClick(product.id)}
+//                   >
+//                     {selectedProduct === product.id ? "Hide Description" : "Show Description"}
+//                   </button>
+
+//                   {/* Show description if the product is clicked */}
+//                   {selectedProduct === product.id && (
+//                     <p className="text-gray-600 mt-3">{product.description}</p>
+//                   )}
+//                 </div>
+
+//                 <a
+//                   href="#"
+//                   className="w-full mt-5 py-4 px-4 bg-black text-white rounded-full font-semibold text-[15px] hover:bg-gray-700"
+//                 >
+//                   Add To Cart
+//                 </a>
+//               </div>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+
+//       <NavLink to="products">
+//         <button className="justify-center border-2 border-black text-center mt-2">
+//           View More
+//         </button>
+//       </NavLink>
+//     </section>
+//   );
+// };
+
+// export default Products;
