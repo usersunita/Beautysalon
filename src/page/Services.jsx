@@ -38,28 +38,30 @@ const Services = () => {
         <div className="w-full">
           <div className="grid md:grid-cols-4 grid-cols-1 gap-6">
             {services?.slice(0, 4).map((service, index) => (
-              <div
-                key={index}
-                className="bg-pink-100  flex-col  items-center  rounded-t-2xl"
-              >
-                <div className="w-auto h-[200px] ">
-                  <img
-                    src={service.img}
-                    alt={service.name}
-                    className=" h-full w-full object-cover cursor-pointer rounded-t-xl "
-                  />
-                </div>
+              <NavLink to={`/services/ ${service?.name}`}>
+                <div
+                  key={index}
+                  className="bg-pink-100  flex-col  items-center  rounded-t-2xl"
+                >
+                  <div className="w-auto h-[200px] ">
+                    <img
+                      src={service.img}
+                      alt={service.name}
+                      className=" h-full w-full object-cover cursor-pointer rounded-t-xl "
+                    />
+                  </div>
 
-                <div className="flex flex-col w-full">
-                  <h1 className="text-center pt-4 text-[22px] text-gray-800 font-bold">
-                    {service.name}
-                  </h1>
+                  <div className="flex flex-col w-full">
+                    <h1 className="text-center pt-4 text-[22px] text-gray-800 font-bold">
+                      {service.name}
+                    </h1>
 
-                  <button className="border-1 py-3 border-black mt-5 bg-black text-white rounded-md">
-                    View Details
-                  </button>
+                    <button className="border-1 py-3 border-black mt-5 bg-black text-white rounded-md">
+                      View Details
+                    </button>
+                  </div>
                 </div>
-              </div>
+              </NavLink>
             ))}
           </div>
         </div>
