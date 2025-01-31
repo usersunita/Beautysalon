@@ -4,6 +4,9 @@ import WhyChoose from "./WhyChoose";
 import Products from "./Products";
 import Services from "./Services";
 import Footer from "../component/Footer";
+import Gallery from "./Gallery";
+import Testimonial from "./Testimonail";
+import Contact from "./Contact";
 
 const Home = () => {
   return (
@@ -13,6 +16,9 @@ const Home = () => {
         <WhyChoose />
         <Products />
         <Services />
+        <Gallery/>
+        <Contact/>
+        <Testimonial/>
         <Footer />
       </div>
     </div>

@@ -5,6 +5,7 @@ import Home from "../page/Home";
 import ProductDetail from "../page/ProductDetail";
 import Register from "../page/Register";
 import Login from "../page/Login";
+import Products from "../page/Products";
 
 const Router = () => {
   return (
@@ -15,8 +16,10 @@ const Router = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<Home />} />
           <Route path="/contact" element={<Home />} />
-          <Route path="/Products" element={<Home />} />
+          <Route path="/Products" element={<Products />} />
           <Route path="/services" element={<Home />} />
+          <Route path="/gallery" element={<Home/>}/>
+          <Route path ="/testmonial" element={<Home/>}/>
           <Route path="/contact" element={<Home />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />

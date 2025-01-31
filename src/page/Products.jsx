@@ -140,9 +140,12 @@ const Products = () => {
           </div>
         ))}
       </div>
+      <NavLink to="products">
+
       <button className="justify-center border-2 border-black text-center mt-2">
         View More
       </button>
+      </NavLink>
     </section>
   );
 };

@@ -24,7 +24,7 @@ const clients = [
 
 const Testimonial = () => {
   return (
-    <div id="testimonial" className="w-full md:max-w-[90%] md:mx-auto h-fit px-5 py-10 flex flex-col justify-center items-center gap-5">
+    <div id="testimonial" className="w-full md:max-w-[90%] md:mx-auto h-fit  py-10 flex flex-col justify-center items-center gap-5">
       <h1 className="text-5xl text-black font-bold text-center ">Testimonials</h1>
       <p className="text-xl text-black font-semibold text-center">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores commodi provident molestiae iste totam vero blanditiis odio sequi? Voluptates quod, numquam ullam reprehenderit modi iusto. Modi qui nihil saepe repellat.

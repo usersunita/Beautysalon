@@ -23,7 +23,7 @@ const Services = () => {
   return (
     <div
       id="services"
-      className="w-full md:max-w-[90%] md:mx-auto flex flex-col  px-5  py-5 justify-center items-center gap-10 "
+      className="w-full md:max-w-[90%] md:mx-auto flex flex-col    py-5 justify-center items-center gap-10 "
     >
       <div className="flex flex-col justify-center items-center gap-4 w-full text-center">
         <h1 className="text-6xl text-black font-bold tracking-wider">
