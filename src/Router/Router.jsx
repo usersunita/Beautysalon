@@ -19,10 +19,10 @@ const Router = () => {
           <Route path="/about" element={<Home />} />
           <Route path="/contact" element={<Home />} />
           <Route path="/Products" element={<Products />} />
-          {/* <Route path="/productlist/:id" element={<ProductList/>}/> */}
+          <Route path="/productlist/:id" element={<ProductList />} />
           <Route path="/services" element={<Home />} />
-          <Route path="/gallery" element={<Home/>}/>
-          <Route path ="/testmonial" element={<Home/>}/>
+          <Route path="/gallery" element={<Home />} />
+          <Route path="/testmonial" element={<Home />} />
           <Route path="/services/:name" element={<DetailServices />} />
           <Route path="/gallery" element={<Home />} />
           <Route path="/testmonial" element={<Home />} />
