@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import product1 from "../assets/product1.jpg";
+import { NavLink } from "react-router-dom";
 
-const newProducts = [
+export const newProducts = [
   {
     id: 1,
     category: "skin",
@@ -82,9 +83,11 @@ const Products = () => {
     setVisibleCount((prev) => (prev >= totalProducts ? 4 : prev + 4));
   };
 
- 
   return (
-    <section id="product" className="w-full md:max-w-[90%] md:mx-auto mx-auto my-12">
+    <section
+      id="product"
+      className="w-full md:max-w-[90%] md:mx-auto mx-auto my-12"
+    >
       <div className="flex justify-between w-full items-center">
         <h3 className="text-3xl font-extrabold text-gray-800 text-center justify-center">
           New Products
@@ -95,7 +98,7 @@ const Products = () => {
           onClick={handleToggle}
         >
           {visibleCount >= totalProducts ? "<<View Less>>" : "<<View More>>"}
-          </div>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
@@ -105,17 +108,19 @@ const Products = () => {
             className={`new-product-box-wrapper ${product.category}`}
           >
             <div className="bg-white rounded-lg shadow-lg hover:shadow-2xl border border-gray-100 p-6">
-              <a href="#" className="relative w-full h-80 mb-6">
-                <span className="absolute top-2 left-2 bg-red-200 text-gray-800 font-semibold py-1 px-2 rounded-md text-xs">
-                  {product.category.charAt(0).toUpperCase() +
-                    product.category.slice(1)}
-                </span>
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  className="w-full h-full object-contain rounded-md transition-transform duration-300 ease-in-out hover:scale-105"
-                />
-              </a>
+              <NavLink to={`productDetail/${product.id}`}>
+                <a href="#" className="relative w-full h-80 mb-6">
+                  <span className="absolute top-2 left-2 bg-red-200 text-gray-800 font-semibold py-1 px-2 rounded-md text-xs">
+                    {product.category.charAt(0).toUpperCase() +
+                      product.category.slice(1)}
+                  </span>
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className="w-full h-full object-contain rounded-md transition-transform duration-300 ease-in-out hover:scale-105"
+                  />
+                </a>
+              </NavLink>
 
               <div className="flex flex-col gap-1 text-center pt-4">
                 <a href="#" className="text-lg font-semibold text-gray-400">
@@ -135,7 +140,9 @@ const Products = () => {
           </div>
         ))}
       </div>
-      <button className="justify-center border-2 border-black text-center mt-2">View More</button>
+      <button className="justify-center border-2 border-black text-center mt-2">
+        View More
+      </button>
     </section>
   );
 };
