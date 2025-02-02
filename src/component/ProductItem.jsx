@@ -5,7 +5,7 @@ import { ShopContext } from "../context/ShopContext";
 const ProductIItem = ({ id, image, name, price }) => {
   const { doller } = useContext(ShopContext);
   return (
-    <Link className="text-gray-700 cursor-pointer" to={`/product/${id}`}>
+    <Link className="text-gray-700 cursor-pointer" to={`/productdetail/${id}`}>
       <div className="overflow-hidden">
         <img
           className="hover:scale-110 transition ease-in-out"

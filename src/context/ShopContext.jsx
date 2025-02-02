@@ -1,46 +1,36 @@
-// import React, { createContext, useState } from "react";
-
-// export const ShopContext = createContext();
-
-// export const ShopProvider = ({ children }) => {
-//   const [cart, setCart] = useState([]);
-//   const [products, setProducts] = useState([
-//     // Mock products data
-//   ]);
-//   const [currency, setCurrency] = useState("₹");
-
-//   const addToCart = (productId, size) => {
-//     const existingProduct = cart.find(item => item.id === productId && item.size === size);
-//     if (existingProduct) {
-//       setCart(cart.map(item =>
-//         item.id === productId && item.size === size
-//           ? { ...item, quantity: item.quantity + 1 }
-//           : item
-//       ));
-//     } else {
-//       setCart([...cart, { id: productId, size, quantity: 1 }]);
-//     }
-//   };
-
-//   return (
-//     <ShopContext.Provider value={{ products, cart, addToCart, currency }}>
-//       {children}
-//     </ShopContext.Provider>
-//   );
-// };
-
-// ShopContext.js
-
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 import { productData } from "../data/ProductData";
 
 export const ShopContext = createContext();
 
 export const ShopProvider = ({ children }) => {
+  const [cartItems, setCartItems] = useState([]);
+  const [cartCount, setCartCount] = useState(0);
+
   const doller = "$";
   const [products, setProducts] = useState(productData);
+  const addToCart = async (data) => {
+    if (data) {
+      setCartItems((prev) => {
+        const existingItem = prev.find((item) => item.product.id === data.id);
+        if (existingItem) {
+          return prev.map((item) =>
+            item.product.id === data.id
+              ? { ...item, quantity: item.quantity + 1 }
+              : item
+          );
+        } else {
+          return [...prev, { product: data, quantity: 1 }];
+        }
+      });
+    }
+  };
 
-  const value = { products, setProducts, doller };
+  useEffect(() => {
+    setCartCount(cartItems.reduce((total, item) => total + item.quantity, 0));
+  }, [cartItems]);
+
+  const value = { products, setProducts, doller, cartCount, addToCart };
 
   return <ShopContext.Provider value={value}>{children}</ShopContext.Provider>;
 };
