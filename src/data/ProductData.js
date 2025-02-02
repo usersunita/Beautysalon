@@ -1,6 +1,7 @@
 import product from "../assets/products.jpg";
 import offer1 from "../assets/offer1.jpg";
 import offer2 from "../assets/offer2.avif";
+import product1 from "../assets/product1.jpg";
 
 const ProductData = [
   {
@@ -287,3 +288,114 @@ export const service = {
     },
   ],
 };
+
+export const productData = [
+  {
+    id: 1,
+    category: "skin",
+    image: product1,
+    title: "FaceWash For Women",
+    price: 300,
+    description: "A refreshing facewash that cleanses your skin deeply.",
+    productName: "FaceWash For Women",
+  },
+  {
+    id: 2,
+    category: "hair",
+    image: product1,
+    title: "Shampoo For Men",
+    price: 250,
+    description: "A revitalizing shampoo for healthy hair.",
+    productName: "Shampoo For Men",
+  },
+  {
+    id: 3,
+    category: "makeup",
+    image: product1,
+    title: "Lipstick Red",
+    price: 150,
+    description: "A vibrant red lipstick for bold looks.",
+    productName: "Lipstick Red",
+  },
+  {
+    id: 4,
+    category: "makeup",
+    image: product1,
+    title: "Lipstick Red",
+    price: 150,
+    description: "A vibrant red lipstick for bold looks.",
+    productName: "Lipstick Red",
+  },
+  {
+    id: 5,
+    category: "makeup",
+    image: product1,
+    title: "Lipstick Red",
+    price: 150,
+    description: "A vibrant red lipstick for bold looks.",
+    productName: "Lipstick Red",
+  },
+  {
+    id: 6,
+    category: "makeup",
+    image: product1,
+    title: "Lipstick Red",
+    price: 150,
+    description: "A vibrant red lipstick for bold looks.",
+    productName: "Lipstick Red",
+  },
+  {
+    id: 7,
+    category: "makeup",
+    image: product1,
+    title: "Lipstick Red",
+    price: 150,
+    description: "A vibrant red lipstick for bold looks.",
+    productName: "Lipstick Red",
+  },
+  {
+    id: 8,
+    category: "makeup",
+    image: product1,
+    title: "Lipstick Red",
+    price: 150,
+    description: "A vibrant red lipstick for bold looks.",
+    productName: "Lipstick Red",
+  },
+  {
+    id: 9,
+    category: "makeup",
+    image: product1,
+    title: "Lipstick Red",
+    price: 150,
+    description: "A vibrant red lipstick for bold looks.",
+    productName: "Lipstick Red",
+  },
+  {
+    id: 10,
+    category: "makeup",
+    image: product1,
+    title: "Lipstick Red",
+    price: 150,
+    description: "A vibrant red lipstick for bold looks.",
+    productName: "Lipstick Red",
+  },
+  {
+    id: 11,
+    category: "skin",
+    image: product1,
+    title: "FaceWash For Women",
+    price: 300,
+    description: "A refreshing facewash that cleanses your skin deeply.",
+    productName: "FaceWash For Women",
+  },
+  {
+    id: 12,
+    category: "hair",
+    image: product1,
+    title: "Shampoo For Men",
+    price: 250,
+    description: "A revitalizing shampoo for healthy hair.",
+    productName: "Shampoo For Men",
+  },
+];

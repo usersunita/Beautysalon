@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
-import { newProducts } from "./Products";
+import { ShopContext } from "../context/ShopContext";
 
 const ProductDetail = () => {
+  const { products } = useContext(ShopContext);
+
+  console.log(products, "productsssssss");
+
   const { id } = useParams();
   console.log(id, "id");
 
-  const filterProduct = newProducts.filter(
-    (item) => item.id.toString() === id.toString()
-  );
-  console.log(filterProduct, "filtredProduct");
+  // const filterProduct = newProducts.filter(
+  //   (item) => item.id.toString() === id.toString()
+  // );
+  // console.log(filterProduct, "filtredProduct");
   return (
     <div>
       <h1>ProductDetail</h1>
