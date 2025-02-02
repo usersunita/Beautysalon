@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import logo from "../assets/logo.avif";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { ShopContext } from "../context/ShopContext";
+import cart_icon from "../assets/cart_icon.png";
+
 const Header = () => {
+  const { cartCount } = useContext(ShopContext);
   return (
     <nav className="sticky top-0 bg-white p-4 shadow-md z-50">
       <div className="container mx-auto flex justify-between items-center mb-5">
@@ -39,6 +43,12 @@ const Header = () => {
         </div>
 
         <div className="flex items-center space-x-4">
+          <Link to="/cart" className="relative">
+            <img src={cart_icon} alt="" className="w-5 min-w-5" />
+            <p className="absolute right-[-5px] bottom-[-4px] w-4 text-center leading-4  bg-black text-white aspect-square rounded-full text-[8px]">
+              {cartCount}
+            </p>
+          </Link>
           <NavLink to="Login" className="text-gray-700 hover:text-gray-900">
             Sign In
           </NavLink>
