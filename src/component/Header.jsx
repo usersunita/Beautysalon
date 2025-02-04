@@ -112,7 +112,14 @@ const Header = () => {
             Contact
           </NavLink>
         </li>
+        <NavLink to="/cart" className="relative">
+        <img src={cart_icon} alt="Cart Icon" className="w-5 min-w-5" />
+        <p className="absolute right-[-5px] bottom-[-4px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]">
+          {/* {getCartCount()} */}
+        </p>
+      </NavLink>
       </ul>
+      
     </nav>
   );
 };
