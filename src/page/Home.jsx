@@ -7,6 +7,7 @@ import Footer from "../component/Footer";
 import Gallery from "./Gallery";
 import Testimonial from "./Testimonail";
 import Contact from "./Contact";
+import ProductList from "./ProductList";
 
 const Home = () => {
   return (
@@ -14,11 +15,11 @@ const Home = () => {
       <div className="bg-gray-50">
         <Her0 />
         <WhyChoose />
-        <Products />
+        <ProductList />
         <Services />
-        <Gallery/>
-        <Contact/>
-        <Testimonial/>
+        <Gallery />
+        <Contact />
+        <Testimonial />
         <Footer />
       </div>
     </div>
