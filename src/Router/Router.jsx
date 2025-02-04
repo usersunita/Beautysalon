@@ -6,11 +6,6 @@ import ProductDetail from "../page/ProductDetail";
 import Register from "../page/Register";
 import Login from "../page/Login";
 import Products from "../page/Products";
-<<<<<<< HEAD
-import ProductList from "../page/ProductList";
-=======
-import DetailServices from "../page/DetailServices";
->>>>>>> 10d2c752af7905a5182a9d85bbccbaba56e988fa
 
 const Router = () => {
   return (
@@ -21,18 +16,10 @@ const Router = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<Home />} />
           <Route path="/contact" element={<Home />} />
-          <Route path="/Products" element={<Products />} />
-<<<<<<< HEAD
-          {/* <Route path="/productlist/:id" element={<ProductList/>}/> */}
+          <Route path="/products" element={<Products />} />
           <Route path="/services" element={<Home />} />
-          <Route path="/gallery" element={<Home/>}/>
-          <Route path ="/testmonial" element={<Home/>}/>
-=======
-          <Route path="/services/:name" element={<DetailServices />} />
           <Route path="/gallery" element={<Home />} />
-          <Route path="/testmonial" element={<Home />} />
->>>>>>> 10d2c752af7905a5182a9d85bbccbaba56e988fa
-          <Route path="/contact" element={<Home />} />
+          <Route path="/testimonial" element={<Home />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
 
