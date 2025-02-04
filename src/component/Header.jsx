@@ -1,13 +1,8 @@
 import React, { useContext } from "react";
 import logo from "../assets/logo.avif";
-<<<<<<< HEAD
-import { NavLink } from "react-router-dom";
-import cart_icon from '../assets/cart_icon.png';
-=======
 import { Link, NavLink } from "react-router-dom";
 import { ShopContext } from "../context/ShopContext";
 import cart_icon from "../assets/cart_icon.png";
->>>>>>> 8dfa8a8e306d76af42de4445ea6e959a03cb0257
 
 const Header = () => {
   const { cartCount } = useContext(ShopContext);
