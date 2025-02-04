@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { ShopContext } from "../context/ShopContext";
 
 const CartTotal = () => {
-  const { currency, getCartAmount } = useContext(ShopContext);
+  const { currency, Cartamount, delivery } = useContext(ShopContext);
 
   console.log(currency);
 

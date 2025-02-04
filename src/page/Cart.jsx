@@ -3,39 +3,52 @@ import { ShopContext } from "../context/ShopContext";
 import CartTotal from "../component/CartTotal";
 
 const Cart = () => {
-  const { products, cartItems } = useContext(ShopContext);
+  const { products, cartItems, updateQuantity } = useContext(ShopContext);
 
-  const [cartData, setCartData] = useState([]);
+  const [cartData, setCartData] = useState([cartItems]);
 
-  useEffect(() => {
-    const tempData = [];
-    for (const itemId in cartItems) {
-      for (const size in cartItems[itemId]) {
-        if (cartItems[itemId][size] > 0) {
-          tempData.push({
-            _id: itemId,
-            size: size,
-            quantity: cartItems[itemId][size],
-          });
-        }
-      }
-    }
-    console.log(tempData);
-    return setCartData(tempData);
-  }, [cartItems]);
+  console.log(cartData,"cartdata")
+
+
+
+
+  // useEffect(() => {
+  //   const tempData = [];
+  //   for (const itemId in cartItems) {
+  //     for (const size in cartItems[itemId]) {
+  //       if (cartItems[itemId][size] > 0) {
+  //         tempData.push({
+  //           _id: itemId,
+  //           size: size,
+  //           quantity: cartItems[itemId][size],
+  //         });
+  //       }
+  //     }
+  //   }
+  //   setCartData(tempData);
+  // }, [cartItems]);
 
   return (
     <div className="border-t pt-14 w-full md:max-w-[80%] md:mx-auto h-screen">
       <div className="text-2xl mb-3">
-        <h1 className=" text-2xl md:text-4xl text-gray-600">YOUR CART</h1>
+        <h1 className="text-2xl md:text-4xl text-gray-600">YOUR CART</h1>
       </div>
-      <div>
-        {cartData.map((item, index) => {
-          const productData = products.find(
-            (product) => product.id === item.id
-          );
 
-          console.log(productData, "productData");
+      {/* {
+
+
+cartData.map((product,index)=>{
+  return <div>
+    <img src={product.product.image} alt="" />
+
+  </div>
+}) */}
+      {/* }
+      {/* <div> */}
+        {cartData.map((item) => {
+          const productData = products.find(
+            (product) => product.id === item._id
+          );
 
           if (!productData) {
             return null;
@@ -43,7 +56,7 @@ const Cart = () => {
 
           return (
             <div
-              key={index}
+              key={item._id}
               className="py-4 border-t border-b text-gray-700 grid grid-cols-[4fr_0.5fr_0.5fr] sm:grid-cols-[4fr_2fr_0.5fr] items-center gap-4"
             >
               <div className="flex items-start gap-6">
@@ -57,38 +70,35 @@ const Cart = () => {
                   </div>
                 </div>
               </div>
-              {/* <input
+              <input
                 onChange={(e) => {
                   const newQuantity = e.target.value;
-                  if (newQuantity === "" || newQuantity <= 0) {
-                    updateQuantity(item._id, item.size, 1);
-                  } else {
+                  if (newQuantity && newQuantity > 0) {
                     updateQuantity(item._id, item.size, newQuantity);
+                  } else {
+                    updateQuantity(item._id, item.size, 1);
                   }
                 }}
+                value={item.quantity}  
                 className="border max-w-10 sm:max-w-20 px-2 py-1"
                 type="number"
                 min={1}
-                defaultValue={item.quantity}
-              /> */}
+              />
               {/* <img
                 onClick={() => updateQuantity(item._id, item.size, 0)}
                 className="w-4 mr-4 sm:w-5 cursor-pointer"
                 src={bin_icon}
-                alt=""
-              /> */}
+                alt="Remove item"
+              />  */}
             </div>
           );
         })}
-      </div>
+      {/* </div>  */}
       <div className="flex justify-end my-20">
         <div className="w-full sm:w-[450px]">
           <CartTotal />
           <div className="w-full text-end">
-            <button
-              //   onClick={() => navigate("/place-order")}
-              className="bg-black text-white text-sm my-8 px-8 py-3"
-            >
+            <button className="bg-black text-white text-sm my-8 px-8 py-3">
               PROCEED TO CHECKOUT
             </button>
           </div>
