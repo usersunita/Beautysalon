@@ -9,6 +9,7 @@ import Products from "../page/Products";
 import DetailServices from "../page/DetailServices";
 import Collection from "../page/Collection";
 import Cart from "../page/Cart";
+import Pricing from "../page/Pricing";
 
 const Router = () => {
   return (
@@ -27,12 +28,12 @@ const Router = () => {
           <Route path="/gallery" element={<Home />} />
           <Route path="/testmonial" element={<Home />} />
           <Route path="/collection" element={<Collection />} />
-
+          <Route path="/beautybanner" element= {<Home/>}/>
           <Route path="/contact" element={<Home />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/cart" element={<Cart />} />
-
+          <Route path="/pricing" element={<Pricing/>}/>
           <Route path="productdetail/:id" element={<ProductDetail />} />
         </Routes>
       </BrowserRouter>

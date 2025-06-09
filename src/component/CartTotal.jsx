@@ -24,7 +24,7 @@ const CartTotal = ({ totalAmount }) => {
           <p>Shipping Fee</p>
           <p>
             {currency}
-            {}
+            {delivery}
           </p>
         </div>
         <hr />

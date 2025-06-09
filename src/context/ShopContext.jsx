@@ -1,13 +1,11 @@
 import React, { createContext, useState, useEffect } from "react";
 import { productData } from "../data/ProductData";
-
 export const ShopContext = createContext();
-
 export const ShopProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
   const [cartCount, setCartCount] = useState(0);
   const delivery = 100;
-  const doller = "$";
+  const doller = "RS.";
   const [products, setProducts] = useState(productData);
   const addToCart = async (data) => {
     if (data) {
@@ -25,21 +23,13 @@ export const ShopProvider = ({ children }) => {
       });
     }
   };
-
   useEffect(() => {
     setCartCount(cartItems.reduce((total, item) => total + item.quantity, 0));
   }, [cartItems]);
 
-  //   const updateQuantity = async (itemId,size,quantity)=>{
-  //     let cartData= structuredClone(cartItems);
-  //     cartData[itemId] [size]= quantity;
-  //     setCartItems(cartData);
-  // }
-
   const Cartamount = (price, quantity) => {
     console.log(price, "dashdg");
     console.log(quantity, "dashdg");
-
     let totalAmount = 0;
     return totalAmount;
   };

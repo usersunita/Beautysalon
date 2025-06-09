@@ -20,7 +20,7 @@ const ProductGrid = () => {
               Natural Green Lotion
             </strong>
             <span className="text-gray-600 text-sm font-medium mt-1">
-              Skin Care Product
+              Beauty Product
             </span>
             <a
               href="#"

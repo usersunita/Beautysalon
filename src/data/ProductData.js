@@ -2,7 +2,23 @@ import product from "../assets/products.jpg";
 import offer1 from "../assets/offer1.jpg";
 import offer2 from "../assets/offer2.avif";
 import product1 from "../assets/product1.jpg";
-
+import shampoo from "../assets/shampoo.jpg";
+import serum from "../assets/Serum.png";
+import Treatment from "../assets/Treatment.jpg";
+import Haircream from "../assets/Haircream.jpg";
+import haircareset from "../assets/haircareset.webp";
+import Foundation1 from "../assets/Foundation1.png";
+import Foundation from "../assets/Foundation.png";
+import Cream from "../assets/Cream.jpg";
+import Lotion from "../assets/Lotion.jpg";
+import lipstick from "../assets/lipstick.avif";
+import Facewash from "../assets/Facewash.jpg";
+import Facewash1 from "../assets/Facewash1.jpg";
+import makeupbag from "../assets/makeupbag.avif";
+import style1 from "../assets/style1.webp";
+import style2 from "../assets/style2.jpg";
+import style3 from "../assets/style3.jpg";
+import style4 from "../assets/style4.jpg";
 const ProductData = [
   {
     id: 1,
@@ -32,7 +48,7 @@ export const service = {
         {
           id: 101,
           name: "Hair Cut",
-          img: product,
+          img: style3,
           price: 20,
           description:
             "A professional haircut to suit your style and personality.",
@@ -40,7 +56,7 @@ export const service = {
         {
           id: 102,
           name: "Hair Coloring",
-          img: product,
+          img: style2,
           price: 50,
           description:
             "Enhance your look with our expert hair coloring services.",
@@ -48,7 +64,7 @@ export const service = {
         {
           id: 103,
           name: "Hair Spa",
-          img: product,
+          img: style3,
           price: 30,
           description:
             "Deep conditioning treatment to nourish and revitalize your hair.",
@@ -56,7 +72,7 @@ export const service = {
         {
           id: 104,
           name: "Keratin Treatment",
-          img: product,
+          img: style4,
           price: 100,
           description:
             "Smooth and strengthen your hair with a keratin-infused treatment.",
@@ -293,97 +309,109 @@ export const productData = [
   {
     id: 1,
     category: "skin",
-    image: product1,
-    title: "FaceWash For Women",
+    image: Facewash1,
+    title: " FaceWash For Women",
     price: 300,
     description: "A refreshing facewash that cleanses your skin deeply.",
     productName: "FaceWash For Women",
   },
   {
+    id: 4,
+    category: "makeup",
+    image: Foundation,
+    title: "Foundation",
+    price: 1500,
+    description: "A vibrant red lipstick for bold looks.",
+    productName: "Foundation",
+  },
+
+  {
+    id: 5,
+    category: "hair",
+    image: Treatment,
+    title: "Hair Treatment Cream",
+    price: 2500,
+    description: "A vibrant red lipstick for bold looks.",
+    productName: "HairTreatment",
+  },
+  {
     id: 2,
     category: "hair",
-    image: product1,
+    image: shampoo,
     title: "Shampoo For Men",
     price: 250,
     description: "A revitalizing shampoo for healthy hair.",
     productName: "Shampoo For Men",
   },
   {
+    id: 13,
+    category: "makeup",
+    image: makeupbag,
+    title: "Makeupbag",
+    price: 450,
+    description: "A vibrant red lipstick for bold looks.",
+    productName: "Makeupbag",
+  },
+
+  {
     id: 3,
     category: "makeup",
-    image: product1,
-    title: "Lipstick Red",
-    price: 150,
+    image: lipstick,
+    title: "Lipstick",
+    price: 1050,
     description: "A vibrant red lipstick for bold looks.",
-    productName: "Lipstick Red",
+    productName: "LipStick",
   },
-  {
-    id: 4,
-    category: "makeup",
-    image: product1,
-    title: "Lipstick Red",
-    price: 150,
-    description: "A vibrant red lipstick for bold looks.",
-    productName: "Lipstick Red",
-  },
-  {
-    id: 5,
-    category: "makeup",
-    image: product1,
-    title: "Lipstick Red",
-    price: 150,
-    description: "A vibrant red lipstick for bold looks.",
-    productName: "Lipstick Red",
-  },
+
   {
     id: 6,
-    category: "makeup",
-    image: product1,
-    title: "Lipstick Red",
+    category: "skin",
+    image: Lotion,
+    title: "Body Lotion",
     price: 150,
     description: "A vibrant red lipstick for bold looks.",
-    productName: "Lipstick Red",
+    productName: "Body Lotion",
   },
   {
     id: 7,
     category: "makeup",
-    image: product1,
-    title: "Lipstick Red",
-    price: 150,
+    image: Foundation1,
+    title: "Foundation",
+    price: 1000,
     description: "A vibrant red lipstick for bold looks.",
-    productName: "Lipstick Red",
+    productName: "Foundation",
   },
   {
     id: 8,
-    category: "makeup",
-    image: product1,
-    title: "Lipstick Red",
+    category: "hair",
+    image: Haircream,
+    title: "Haircream",
     price: 150,
     description: "A vibrant red lipstick for bold looks.",
-    productName: "Lipstick Red",
+    productName: "HairCream",
   },
-  {
-    id: 9,
-    category: "makeup",
-    image: product1,
-    title: "Lipstick Red",
-    price: 150,
-    description: "A vibrant red lipstick for bold looks.",
-    productName: "Lipstick Red",
-  },
+  // {
+  //   id: 9,
+  //   category: "skin",
+  //   image: serum,
+  //   title: "Face Serum",
+  //   price: 1500,
+  //   description: "A vibrant red lipstick for bold looks.",
+  //   productName: "Face Serum",
+  // },
   {
     id: 10,
-    category: "makeup",
-    image: product1,
-    title: "Lipstick Red",
-    price: 150,
+    category: "hair",
+    image: Treatment,
+    title: "Treatment Cream",
+    price: 850,
     description: "A vibrant red lipstick for bold looks.",
-    productName: "Lipstick Red",
+    productName: "Treatment cream",
   },
   {
     id: 11,
-    category: "skin",
-    image: product1,
+    category: "makeup",
+    image: lipstick,
     title: "FaceWash For Women",
     price: 300,
     description: "A refreshing facewash that cleanses your skin deeply.",

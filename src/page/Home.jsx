@@ -8,12 +8,14 @@ import Gallery from "./Gallery";
 import Testimonial from "./Testimonail";
 import Contact from "./Contact";
 import ProductList from "./ProductList";
+import BeautyBanner from "../component/BeautyBanner";
 
 const Home = () => {
   return (
     <div>
       <div className="bg-gray-50">
         <Her0 />
+        <BeautyBanner/>
         <WhyChoose />
         <ProductList />
         <Services />

@@ -414,7 +414,7 @@ const Products = () => {
         </div>
       </div>
       {/*Right Side */}
-      <div className="flex-1">
+      {/* <div className="flex-1">
         <div className="flex justify-between text-base sm:text-2xl mb-4">
           <h1 className="md:text-4xl text-xl">All Collection </h1>
 
@@ -427,6 +427,32 @@ const Products = () => {
             <option value="high-low">Sort by: High to Low</option>
           </select>
         </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6">
+          {filterProducts?.map((item) => (
+            <ProductIItem
+              key={item.id}
+              id={item.id}
+              image={item.image}
+              price={item.price}
+              name={item.productName}
+            />
+          ))}
+        </div>
+      </div> */}
+      <div className="flex-1">
+        <div className="flex justify-between text-base sm:text-2xl mb-4">
+          <h1 className="md:text-4xl text-xl">All Collection</h1>
+
+          <select
+            onChange={(e) => setSortType(e.target.value)}
+            className="border-2 border-gray-300 text-sm px-2 py-1 rounded"
+          >
+            <option value="relevent">Sort by: Relevance</option>
+            <option value="low-high">Sort by: Low to High</option>
+            <option value="high-low">Sort by: High to Low</option>
+          </select>
+        </div>
+
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6">
           {filterProducts?.map((item) => (
             <ProductIItem

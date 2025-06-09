@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ShopContext } from "../context/ShopContext";
 import CartTotal from "../component/CartTotal";
+import RelatedProducts from "../component/RelatedProduct";
 
 const Cart = () => {
-  const { cartItems, Cartamount, doller } = useContext(ShopContext);
+  const { cartItems, Cartamount, doller, delivery } = useContext(ShopContext);
   const [cartData, setCartData] = useState(cartItems);
-  console.log(cartData, "dajksdgkjasd");
 
   useEffect(() => {
     setCartData(cartItems);
@@ -13,7 +13,7 @@ const Cart = () => {
 
   const totalPrice = cartData?.reduce((total, item) => {
     return total + item?.product?.price * item?.quantity;
-  }, 0);
+  }, 0) + delivery;
 
   return (
     <div className="border-t pt-14 w-full md:max-w-[80%] md:mx-auto h-screen">
@@ -28,7 +28,6 @@ const Cart = () => {
               key={index}
               className="flex flex-col md:flex-row items-center md:items-start gap-6 p-4 border rounded-lg shadow-md bg-white"
             >
-              {/* Product Image */}
               <img
                 src={item?.product?.image}
                 alt={item?.product?.productName}
@@ -38,7 +37,7 @@ const Cart = () => {
               {/* Product Details */}
               <div className="flex flex-col gap-3 text-gray-800">
                 <p className="text-lg md:text-xl uppercase font-semibold text-gray-900">
-                  <span className="text-balck">{item?.product?.category}</span>
+                  <span className="text-black">{item?.product?.category}</span>
                 </p>
                 <h2 className="text-xl md:text-2xl font-bold text-gray-900">
                   {item?.product?.productName}
@@ -46,13 +45,11 @@ const Cart = () => {
                 <p className="text-sm md:text-base text-gray-600">
                   {item?.product?.description}
                 </p>
-                <p
-                  className={`text-sm md:text-base text-gray-600 ${Cartamount(
-                    item?.product?.price,
-                    item?.quantity
-                  )}`}
-                >
+                <p className="text-sm md:text-base text-gray-600">
                   {doller} {item?.product?.price}
+                </p>
+                <p className="text-sm md:text-base text-gray-600">
+                  {Cartamount(item?.product?.price, item?.quantity)}
                 </p>
               </div>
             </div>
@@ -69,6 +66,24 @@ const Cart = () => {
           </div>
         </div>
       </div>
+
+      <div className="mt-20">
+        <div className="flex">
+          <b className="border px-5 py-3 text-sm">Description</b>
+          <p className="border px-5 py-3 text-sm">Reviews</p>
+        </div>
+        <div className="flex flex-col gap-4 border px-4  py-6 text-sm text-gray-500">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit...</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+        </div>
+      </div>
+
+      {cartData.length > 0 && (
+        <RelatedProducts
+          category={cartData[0]?.product?.category}
+          subCategory={cartData[0]?.product?.subCategory}
+        />
+      )}
     </div>
   );
 };
